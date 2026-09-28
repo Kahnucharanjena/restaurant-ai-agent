@@ -1,0 +1,50 @@
+[
+    {
+        "ticket_id": "TKT-0001",
+        "customer_id": "CUS-001",
+        "category": "Payment",
+        "priority": "High",
+        "description": "Payment was deducted but the order failed.",
+        "status": "Open"
+    },
+    {
+        "ticket_id": "TKT-0002",
+        "customer_id": "CUS-001",
+        "category": "Payment",
+        "priority": "High",
+        "description": "Payment was deducted but the order failed.",
+        "status": "Open"
+    },
+    {
+        "ticket_id": "TKT-0003",
+        "customer_id": "CUS-001",
+        "category": "Payment",
+        "priority": "Low",
+        "description": "My payment was deducted but my order failed. Please help me immediately.",
+        "status": "Open"
+    },
+    {
+        "ticket_id": "TKT-0004",
+        "customer_id": "CUS-001",
+        "category": "Payment",
+        "priority": "Low",
+        "description": "My payment was deducted but my order failed. Please help me immediately.",
+        "status": "Open"
+    },
+    {
+        "ticket_id": "TKT-0005",
+        "customer_id": "CUS-001",
+        "category": "Payment",
+        "priority": "Low",
+        "description": "My payment was deducted but my order failed.",
+        "status": "Open"
+    },
+    {
+        "ticket_id": "TKT-0006",
+        "customer_id": "CUS-001",
+        "category": "Payment",
+        "priority": "Low",
+        "description": "My payment was deducted but my order failed.",
+        "status": "Open"
+    }
+]

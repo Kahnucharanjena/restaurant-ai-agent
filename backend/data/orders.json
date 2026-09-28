@@ -1,0 +1,53 @@
+[
+  {
+    "order_id": "ORD-1001",
+    "customer_id": "CUS-001",
+    "restaurant": "Food Palace",
+    "status": "Preparing",
+    "payment_status": "Paid",
+    "amount": 349,
+    "estimated_delivery": "30 minutes"
+  },
+  {
+    "order_id": "ORD-1002",
+    "customer_id": "CUS-002",
+    "restaurant": "Spice Garden",
+    "status": "Delivered",
+    "payment_status": "Paid",
+    "amount": 299,
+    "estimated_delivery": "Delivered"
+  },
+  {
+    "order_id": "ORD-1003",
+    "customer_id": "CUS-001",
+    "restaurant": "Burger House",
+    "status": "Out for Delivery",
+    "payment_status": "Paid",
+    "amount": 249,
+    "estimated_delivery": "15 minutes"
+  },
+  {
+    "order_id": "ORD-1004",
+    "customer_id": "CUS-003",
+    "restaurant": "Tasty Bites",
+    "status": "Cancelled",
+    "payment_status": "Refund Pending",
+    "amount": 499,
+    "estimated_delivery": "N/A"
+  },
+  {
+    "order_id": "ORD-1005",
+    "customer_id": "CUS-001",
+    "restaurant": "Food Palace",
+    "status": "Out for Delivery",
+    "payment_status": "Paid",
+    "amount": 399,
+    "estimated_delivery": "10 minutes",
+    "items": [
+      "Chicken Biryani",
+      "Raita",
+      "Coke"
+    ],
+    "delivery_address": "Bhubaneswar, Odisha"
+  }
+]

@@ -1,0 +1,949 @@
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    font-family: Inter, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #eef2f7;
+    color: #172033;
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   APP
+============================================================ */
+
+.app {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+
+    overflow: hidden;
+}
+
+
+/* ============================================================
+   SIDEBAR
+============================================================ */
+
+.sidebar {
+    width: 310px;
+    min-width: 310px;
+
+    height: 100vh;
+
+    background: #101828;
+
+    color: white;
+
+    padding: 24px 18px;
+
+    overflow-y: auto;
+}
+
+
+/* ============================================================
+   BRAND
+============================================================ */
+
+.brand {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 5px 8px 24px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+    margin-bottom: 18px;
+}
+
+
+/* Restaurant Logo */
+
+.brand-icon {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    color: #111827;
+
+    border-radius: 13px;
+
+    padding: 9px;
+
+    flex-shrink: 0;
+}
+
+.brand-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Brand text */
+
+.brand h1 {
+    font-size: 18px;
+
+    font-weight: 700;
+}
+
+.brand p {
+    margin-top: 3px;
+
+    font-size: 12px;
+
+    color: #98a2b3;
+}
+
+
+/* ============================================================
+   SIDEBAR CARDS
+============================================================ */
+
+.sidebar-card {
+    background: #182230;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 14px;
+
+    padding: 15px;
+
+    margin-bottom: 14px;
+}
+
+.card-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    margin-bottom: 14px;
+}
+
+
+/* Customer */
+
+.customer-info {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 4px;
+
+    margin-bottom: 12px;
+}
+
+.customer-info strong {
+    font-size: 11px;
+
+    color: #98a2b3;
+
+    text-transform: uppercase;
+}
+
+.customer-info span {
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+
+/* Status */
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+
+    display: inline-block;
+
+    background: #22c55e;
+
+    border-radius: 50%;
+
+    flex-shrink: 0;
+}
+
+.online-status,
+.agent-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    font-size: 12px;
+
+    color: #98a2b3;
+}
+
+.agent-status {
+    color: #d0d5dd;
+
+    font-size: 13px;
+
+    margin-bottom: 8px;
+}
+
+.small-text {
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    color: #98a2b3;
+}
+
+
+/* Tools */
+
+.tool-list {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+.tool-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    color: #d0d5dd;
+
+    font-size: 12px;
+}
+
+
+/* Security */
+
+.security-card {
+    border-color: rgba(34,197,94,0.25);
+}
+
+.security-card p {
+    font-size: 11px;
+
+    color: #98a2b3;
+
+    line-height: 1.5;
+
+    margin-bottom: 10px;
+}
+
+.security-status {
+    color: #4ade80;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* Automation */
+
+.automation-flow {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 5px;
+
+    font-size: 9px;
+
+    color: #cbd5e1;
+}
+
+.automation-flow b {
+    color: #64748b;
+}
+
+
+/* ============================================================
+   CHAT CONTAINER
+============================================================ */
+
+.chat-container {
+    flex: 1;
+
+    height: 100vh;
+
+    min-width: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    background: #f8fafc;
+
+    position: relative;
+}
+
+
+/* ============================================================
+   HEADER
+============================================================ */
+
+.chat-header {
+    height: 78px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 30px;
+
+    background: white;
+
+    border-bottom: 1px solid #e4e7ec;
+}
+
+.header-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+/* Restaurant Header Logo */
+
+.ai-avatar-large {
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 13px;
+
+    flex-shrink: 0;
+}
+
+.restaurant-header-logo {
+    background: #111827;
+
+    color: white;
+
+    padding: 9px;
+}
+
+.restaurant-header-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* Header */
+
+.chat-header h2 {
+    font-size: 17px;
+
+    font-weight: 700;
+
+    color: #101828;
+}
+
+.header-status {
+    display: flex;
+
+    align-items: center;
+
+    gap: 6px;
+
+    margin-top: 4px;
+
+    font-size: 11px;
+
+    color: #667085;
+}
+
+.connection-badge {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    padding: 8px 12px;
+
+    border-radius: 20px;
+
+    background: #ecfdf3;
+
+    color: #067647;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* ============================================================
+   CHAT MESSAGES
+============================================================ */
+
+.chat-messages {
+    flex: 1;
+
+    min-height: 0;
+
+    overflow-y: auto;
+
+    padding: 28px 50px 24px;
+
+    scroll-behavior: smooth;
+}
+
+
+/* Scrollbar */
+
+.chat-messages::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.chat-messages::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+   MESSAGE
+============================================================ */
+
+.message {
+    width: 100%;
+
+    display: flex;
+
+    margin-bottom: 22px;
+}
+
+
+/* AI LEFT */
+
+.assistant-message {
+    justify-content: flex-start;
+}
+
+
+/* USER RIGHT */
+
+.user-message {
+    justify-content: flex-end;
+}
+
+
+/* Avatar */
+
+.avatar {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 11px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+
+/* AI Avatar */
+
+.ai-avatar {
+    background: #111827;
+
+    color: white;
+
+    margin-right: 10px;
+}
+
+
+/* Restaurant message logo */
+
+.restaurant-message-logo {
+    padding: 7px;
+}
+
+.restaurant-message-logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+
+/* User avatar */
+
+.user-avatar {
+    background: #e0e7ff;
+
+    color: #3730a3;
+
+    margin-left: 10px;
+
+    order: 2;
+}
+
+
+/* ============================================================
+   MESSAGE CONTENT
+============================================================ */
+
+.message-content {
+    max-width: min(680px, 72%);
+}
+
+.message-name {
+    font-size: 11px;
+
+    color: #667085;
+
+    margin-bottom: 6px;
+}
+
+
+/* User name */
+
+.user-message .message-name {
+    text-align: right;
+}
+
+
+/* ============================================================
+   MESSAGE BUBBLE
+============================================================ */
+
+.message-bubble {
+    padding: 14px 17px;
+
+    border-radius: 17px;
+
+    font-size: 14px;
+
+    line-height: 1.55;
+
+    word-wrap: break-word;
+}
+
+
+/* AI */
+
+.assistant-message .message-bubble {
+    background: white;
+
+    border: 1px solid #e4e7ec;
+
+    border-top-left-radius: 5px;
+
+    color: #1d2939;
+
+    box-shadow: 0 2px 7px rgba(16,24,40,0.04);
+}
+
+
+/* USER */
+
+.user-message .message-bubble {
+    background: #111827;
+
+    color: white;
+
+    border-top-right-radius: 5px;
+
+    box-shadow: 0 3px 10px rgba(16,24,40,0.12);
+}
+
+
+/* Bubble content */
+
+.message-bubble p {
+    margin-top: 9px;
+}
+
+.message-bubble ul {
+    margin: 8px 0 8px 18px;
+}
+
+.message-bubble li {
+    margin: 4px 0;
+}
+
+
+/* ============================================================
+   QUICK ACTIONS
+============================================================ */
+
+.quick-actions {
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    padding: 10px 35px;
+
+    background: #f8fafc;
+}
+
+.quick-actions button {
+    border: 1px solid #d0d5dd;
+
+    background: white;
+
+    color: #344054;
+
+    border-radius: 20px;
+
+    padding: 8px 14px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+.quick-actions button:hover {
+    background: #f2f4f7;
+
+    border-color: #98a2b3;
+
+    transform: translateY(-1px);
+}
+
+
+/* ============================================================
+   INPUT AREA
+============================================================ */
+
+.chat-input-area {
+    flex-shrink: 0;
+
+    padding: 10px 35px 18px;
+
+    background: white;
+
+    border-top: 1px solid #e4e7ec;
+
+    box-shadow: 0 -3px 12px rgba(16,24,40,0.04);
+}
+
+
+/* Input wrapper */
+
+.chat-input-wrapper {
+    width: 100%;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: flex-end;
+
+    gap: 10px;
+
+    background: #f8fafc;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 15px;
+
+    padding: 7px;
+
+    transition: 0.2s ease;
+}
+
+.chat-input-wrapper:focus-within {
+    border-color: #667085;
+
+    box-shadow: 0 0 0 3px rgba(102,112,133,0.08);
+}
+
+
+/* Textarea */
+
+#messageInput {
+    flex: 1;
+
+    min-width: 0;
+
+    resize: none;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    padding: 10px 12px;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+
+    color: #101828;
+
+    max-height: 100px;
+}
+
+#messageInput::placeholder {
+    color: #98a2b3;
+}
+
+
+/* Send */
+
+.send-button {
+    height: 42px;
+
+    min-width: 90px;
+
+    border: none;
+
+    border-radius: 11px;
+
+    background: #111827;
+
+    color: white;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 8px;
+
+    transition: 0.2s ease;
+}
+
+.send-button:hover {
+    background: #1f2937;
+
+    transform: translateY(-1px);
+}
+
+.send-button:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+.send-icon {
+    font-size: 15px;
+}
+
+
+/* Hint */
+
+.input-hint {
+    max-width: 950px;
+
+    margin: 6px auto 0;
+
+    font-size: 10px;
+
+    color: #98a2b3;
+
+    text-align: center;
+}
+
+.input-hint span {
+    margin: 0 5px;
+}
+
+
+/* ============================================================
+   LOADING
+============================================================ */
+
+.loading-dots {
+    display: flex;
+
+    align-items: center;
+
+    gap: 4px;
+}
+
+.loading-dots span {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #667085;
+
+    animation: loading 1.2s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes loading {
+
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+        opacity: 0.4;
+    }
+
+    30% {
+        transform: translateY(-4px);
+        opacity: 1;
+    }
+}
+
+
+/* ============================================================
+   RESPONSIVE
+============================================================ */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 240px;
+
+        min-width: 240px;
+    }
+
+    .chat-messages {
+        padding-left: 25px;
+
+        padding-right: 25px;
+    }
+
+    .message-content {
+        max-width: 78%;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    body {
+        overflow: auto;
+    }
+
+    .app {
+        height: 100vh;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    .chat-container {
+        width: 100%;
+    }
+
+    .chat-header {
+        padding: 0 16px;
+    }
+
+    .connection-badge {
+        display: none;
+    }
+
+    .chat-messages {
+        padding: 20px 14px;
+    }
+
+    .message-content {
+        max-width: 82%;
+    }
+
+    .quick-actions {
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        padding: 8px 12px;
+    }
+
+    .quick-actions button {
+        white-space: nowrap;
+    }
+
+    .chat-input-area {
+        padding: 8px 12px 14px;
+    }
+
+    .input-hint {
+        display: none;
+    }
+}
